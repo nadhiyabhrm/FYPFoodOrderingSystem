@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.Child_Information"
+             Title="Child Information">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                    <GradientStop Color="#FFD966" Offset="2.0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <StackLayout>
+                <Label
+                    Text="CHILD INFORMATION"
+                    TextColor="#003366" FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    Padding="15"
+                    FontFamily="Helvetica"
+                    HeightRequest="110"/>
+                <Frame
+                    Margin="0,0,0,0"
+                    WidthRequest="280"
+                    HeightRequest="340"
+                    BackgroundColor="#FFF2CC"
+                    HorizontalOptions="Center"
+                    AbsoluteLayout.LayoutBounds="1, 0.05, 0.15, 0.1">
+                    <StackLayout>
+                        <Entry
+                            x:Name="StudentName"
+                            Placeholder="NAME"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,30,0,20"/>
+                        <Entry
+                            x:Name="IC"
+                            Placeholder="IC"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,0,0,20"/>
+                        <Picker
+                            x:Name="Grade"
+                            Title="GRADE"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,0,0,20">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Picker
+                            x:Name="Class"
+                            Title="CLASS"
+                            HorizontalTextAlignment="Center">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Amanah</x:String>
+                                    <x:String>Bestari</x:String>
+                                    <x:String>Cergas</x:String>
+                                    <x:String>Dedikasi</x:String>
+                                    <x:String>Ehsan</x:String>
+                                    <x:String>Fikrah</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+                </Frame>
+                <Button
+                    Text="ADD"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    WidthRequest="180"
+                    HeightRequest="50"
+                    BorderColor="DarkGray"
+                    BorderWidth="2"
+                    CornerRadius="10"
+                    x:Name="AddChild"
+                    Clicked="AddChild_Clicked"
+                    Margin="0,10,0,0"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

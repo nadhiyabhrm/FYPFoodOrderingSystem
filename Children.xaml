@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.Children"
+             Title="Children">
+    <ContentPage.Content>
+        <RefreshView
+            x:Name="RefreshChildren" Refreshing="RefreshChildren_Refreshing">
+            <ScrollView>
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                            <GradientStop Color="#FFD966" Offset="2.0"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <StackLayout>
+                        <Button
+                            VerticalOptions="Start"
+                            HorizontalOptions="Center"
+                            Margin="0,30,0,0"
+                            BackgroundColor="Transparent"
+                            Text="+ ADD CHILD"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            x:Name="AddChild"
+                            Clicked="AddChild_Clicked"
+                            TextColor="Blue"/>
+                        <ListView
+                            ItemTapped="OnItemSelected"
+                            x:Name ="DisplayChild"
+                            Margin="20,30,30,0"
+                            WidthRequest="100"
+                            HeightRequest="100">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell
+                                        Text = "{Binding StudentName}"
+                                        TextColor="Black"
+                                        Detail = "{Binding IC}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <Label
+                            Text="SELECT CHILD TO ORDER"
+                            VerticalOptions="Start"
+                            HorizontalOptions="Center"
+                            Margin="0,0,0,50"
+                            TextColor="Black"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

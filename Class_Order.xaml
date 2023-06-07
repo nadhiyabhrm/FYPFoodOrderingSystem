@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.Class_Order"
+             Title="Class Order">
+    <ContentPage.Content>
+        <RefreshView
+            x:Name="RefreshClassOrder" Refreshing="RefreshClassOrder_Refreshing">
+            <ScrollView>
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                            <GradientStop Color="#FFD966" Offset="2.0"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <StackLayout>
+                        <Grid Margin="20,30,20,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="1"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Picker
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                x:Name="Grade"
+                                Title="GRADE"
+                                HorizontalTextAlignment="Center">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>1</x:String>
+                                        <x:String>2</x:String>
+                                        <x:String>3</x:String>
+                                        <x:String>4</x:String>
+                                        <x:String>5</x:String>
+                                        <x:String>6</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                            <Picker
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        x:Name="Class"
+                        Title="CLASS"
+                        HorizontalTextAlignment="Center">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Amanah</x:String>
+                                        <x:String>Bestari</x:String>
+                                        <x:String>Cergas</x:String>
+                                        <x:String>Dedikasi</x:String>
+                                        <x:String>Ehsan</x:String>
+                                        <x:String>Fikrah</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                            <Button
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                Text="Filter by Class"
+                                x:Name="ClassFilter"
+                                Clicked="ClassFilter_Clicked">
+                            </Button>
+                            <Label
+                                Grid.Row="3"
+                                Grid.ColumnSpan="2"
+                                Text="No order if blank"
+                                TextColor="black"
+                                FontSize="14"
+                                HorizontalOptions="Center"/>
+                        </Grid>
+                        <Grid
+                            Margin="20,30,30,20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="230"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Text="Name"
+                                FontSize="16"
+                                TextColor="Black"
+                                HorizontalOptions="Center"/>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Text="Package"
+                                FontSize="16"
+                                TextColor="Black"
+                                HorizontalOptions="Start"/>
+                            <ListView
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                x:Name ="DisplayOrder"
+                                BackgroundColor="White">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="30" />
+                                                <ColumnDefinition Width="3*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label
+                                                Padding="0,13,0,0"
+                                                TextColor="Black"
+                                                FontSize="16"
+                                                Grid.Column="1"
+                                                Text="{Binding StudentName}"/>
+                                            <Label
+                                                Padding="15,13,0,0"
+                                                TextColor="Black"
+                                                FontSize="16"
+                                                Grid.Column="2"
+                                                Text="{Binding Package}"/>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        </Grid>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>
+
+        <!--<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="250" />
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+
+    <ListView
+        Grid.Row="0"
+        Grid.Column="0"                        
+        x:Name ="DisplayStudent">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text = "{Binding StudentName}"
+                        Detail = "{Binding ParentEmail}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    <ListView
+        Grid.Row="0"
+        Grid.Column="1"                        
+        x:Name ="DisplayStudent2">
+        <ListView.ItemTemplate
+                FontSize="20">
+            <DataTemplate>
+                <TextCell Text = "{Binding Grade}"
+                        Detail = "{Binding ParentEmail}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</Grid>-->
+
+        <!--Xde pun xpe
+    <Button
+    x:Name="DownloadOrder"
+    Clicked="DownloadOrder_Clicked"
+    Text="DOWNLOAD"
+    BackgroundColor="Pink"
+    BorderColor="PaleVioletRed"
+    HorizontalOptions="Center"
+    VerticalOptions="End"
+    Margin="0,0,0,20"/>-->

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FOFS"
+             x:Class="FOFS.Login"
+             Title="Login">
+    <ContentPage.Content>
+        <RefreshView
+            x:Name="RefreshLogin" Refreshing="RefreshLogin_Refreshing">
+            <ScrollView>
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                            <GradientStop Color="#FFD966" Offset="2.0"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <StackLayout>
+                        <Label
+                            Text="FOOD ORDERING FOR SCHOOL"
+                            TextColor="#003366" FontSize="38"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Padding="15"
+                            FontFamily="Helvetica"
+                            HeightRequest="110"/>
+                        <Frame  
+                            WidthRequest="280"
+                            HeightRequest="340"
+                            BackgroundColor="#FFF2CC"
+                            HorizontalOptions="Center"
+                            AbsoluteLayout.LayoutBounds="1, 0.05, 0.15, 0.1">
+                            <StackLayout>
+                                <Image
+                                    Source="Logo.jpg"
+                                    HeightRequest="200"
+                                    WidthRequest="200"
+                                    HorizontalOptions="Center"
+                                    Margin="0,0,0,20"/>
+                                <Entry
+                                    x:Name="UName"
+                                    Placeholder="USERNAME"
+                                    HorizontalTextAlignment="Center"/>
+                                <Entry
+                                    Margin="0,20,0,0"
+                                    x:Name="PWord"
+                                    Placeholder="PASSWORD"
+                                    IsPassword="True"
+                                    HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Button
+                            Text="LOGIN"
+                            x:Name="Button"
+                            Clicked="Log_In_Clicked"
+                            FontSize="18"
+                            HorizontalOptions="Center"
+                            VerticalOptions="EndAndExpand"
+                            WidthRequest="180"
+                            HeightRequest="50"
+                            BorderColor="DarkGray"
+                            BorderWidth="2"
+                            CornerRadius="10">
+                        </Button>
+                        <StackLayout
+                            Orientation="Horizontal">
+                            <Label 
+                                Text="No account?"
+                                Padding="106,0,0,0"/>
+                            <Button
+                                Text="Sign Up Here!"
+                                x:Name="SignUp"
+                                Clicked="SignUp_Clicked"
+                                FontSize="14"
+                                Padding="0,0,5,33"
+                                TextTransform="None"
+                                TextColor="Blue"
+                                BackgroundColor="Transparent"/>
+                            <!--<Button
+                                Text = "ListView"
+                                x:Name = "DisplayUser"
+                                Clicked = "Display_Clicked"/>-->
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+                </ScrollView>
+            </RefreshView>
+    </ContentPage.Content>
+</ContentPage>
+
+<!--<BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                    <GradientStop Color="#FFD966" Offset="1.0"/>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>-->
+<!--<StackLayout>
+        <Frame
+        HasShadow="True"
+        HeightRequest="650"
+        WidthRequest="120">
+            <Frame.Background>
+                -->
+<!-- StartPoint defaults to (0,0) -->
+<!--
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF2CC"
+                          Offset="0.1" />
+                    <GradientStop Color="#FFD966"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>            
+        </Frame>-->
+<!--<Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to " HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Learn more at "/>
+                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>-->

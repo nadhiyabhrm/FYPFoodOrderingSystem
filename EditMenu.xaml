@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.EditMenu">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                    <GradientStop Color="#FFD966" Offset="2.0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <StackLayout>
+                <Frame
+                    HeightRequest="120"
+                    Margin="30,30,30,20"
+                    BackgroundColor="#FFF2CC">
+                    <StackLayout>
+                        <Label
+                            Text="CURRENT DETAILS"
+                            FontSize ="20"
+                            Margin="0,0,0,5"
+                            HorizontalOptions="Center"
+                            TextColor="Black"/>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Text="A Price: "
+                                HorizontalOptions="End"
+                                TextColor="Black"/>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                x:Name="CurrentAPrice"
+                                TextColor="Black"/>
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Text="B Price: "
+                                HorizontalOptions="End"
+                                TextColor="Black"/>
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                x:Name="CurrentBPrice"
+                                TextColor="Black"/>
+                            <Label
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Text="C Price: "
+                                HorizontalOptions="End"
+                                TextColor="Black"/>
+                            <Label
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                x:Name="CurrentCPrice"
+                                TextColor="Black"/>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                <Frame
+                    Margin="0,10,0,0"
+                    WidthRequest="280"
+                    HeightRequest="270"
+                    BackgroundColor="#FFF2CC"
+                    HorizontalOptions="Center"
+                    AbsoluteLayout.LayoutBounds="1, 0.05, 0.15, 0.1">
+                    <StackLayout>
+                        <Entry
+                            x:Name="NewAPrice"
+                            Placeholder="New A Price"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,10,0,20"/>
+                        <Entry
+                            x:Name="NewBPrice"
+                            Placeholder="New B Price"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,10,0,20"/>
+                        <Entry
+                            x:Name="NewCPrice"
+                            Placeholder="New C Price"
+                            HorizontalTextAlignment="Center"
+                            Margin="0,10,0,20"/>
+                    </StackLayout>
+                </Frame>
+                <Button
+                    Text="UPDATE"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    WidthRequest="180"
+                    HeightRequest="50"
+                    BorderColor="DarkGray"
+                    BorderWidth="2"
+                    CornerRadius="10"
+                    x:Name="UpdatedPrice"
+                    Clicked="UpdatedPrice_Clicked"
+                    Margin="0,10,0,0"/>
+            </StackLayout>
+        </Grid>        
+    </ContentPage.Content>
+</ContentPage>

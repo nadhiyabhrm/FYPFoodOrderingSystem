@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.Package"
+             Title="PACKAGE">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                    <GradientStop Color="#FFD966" Offset="2.0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="210"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="PACKAGE"
+                        TextColor="#003366"
+                        FontSize="30"
+                        HorizontalTextAlignment="End"
+                        FontAttributes="Bold"
+                        Padding="15"
+                        FontFamily="Helvetica"
+                        HeightRequest="110"/>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        x:Name="PakejA"
+                        TextColor="#003366"
+                        FontSize="30"
+                        HorizontalTextAlignment="Start"
+                        FontAttributes="Bold"
+                        Padding="15"
+                        FontFamily="Helvetica"
+                        HeightRequest="110"/>
+                </Grid>
+                <ListView
+                    ItemTapped="OnItemSelected"
+                    x:Name ="DisplayMenu"
+                    Margin="10,30,10,0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="75" />
+                                        <ColumnDefinition Width="70" />
+                                        <ColumnDefinition Width="50" />
+                                        <ColumnDefinition Width="70" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                        Padding="0,13,0,0"
+                                        TextColor="Black"
+                                        FontSize="16"
+                                        Grid.Column="0"
+                                        Text="{Binding Day}"/>
+                                    <Label
+                                        Padding="0,5,0,0"
+                                        TextColor="Black"
+                                        FontSize="16"
+                                        Grid.Column="1"
+                                        Text="{Binding Food}"/>
+                                    <Label
+                                        Padding="0,13,0,0"
+                                        TextColor="Black"
+                                        FontSize="16"
+                                        Grid.Column="2"
+                                        Text="{Binding Drink}"/>
+                                    <Label
+                                        Padding="0,9,0,0"
+                                        TextColor="Black"
+                                        FontSize="16"
+                                        Grid.Column="3"
+                                        Text="{Binding Fruit}"/>
+                                    <Label
+                                        Padding="0,13,0,0"
+                                        TextColor="Black"
+                                        FontSize="16"
+                                        Grid.Column="4"
+                                        Text="{Binding Snack}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--<Frame>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.ColumnSpan="1"
+                            VerticalOptions="Center"
+                            Text="MONDAY"/>
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="0"/>
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Text="FRIED RICE"/>
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="1"/>
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Text="SIRAP"/>
+
+                        <Label
+                            Grid.Row="3"
+                            Grid.ColumnSpan="1"
+                            VerticalOptions="Center"
+                            Text="TUESDAY"/>
+                        <Image
+                            Grid.Row="4"
+                            Grid.Column="0"/>
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Text="FRIED BIHUN"/>
+                        <Image
+                            Grid.Row="4"
+                            Grid.Column="1"/>
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            Text="ORANGE"/>
+
+                        <Label
+                            Grid.Row="6"
+                            Grid.ColumnSpan="1"
+                            VerticalOptions="Center"
+                            Text="WEDNESDAY"/>
+                        <Image
+                            Grid.Row="7"
+                            Grid.Column="0"/>
+                        <Label
+                            Grid.Row="8"
+                            Grid.Column="0"
+                            Text="FRIED KUEW TIAU"/>
+                        <Image
+                            Grid.Row="7"
+                            Grid.Column="1"/>
+                        <Label
+                            Grid.Row="8"
+                            Grid.Column="1"
+                            Text="ANGGUR"/>
+
+                        <Label
+                            Grid.Row="9"
+                            Grid.ColumnSpan="1"
+                            VerticalOptions="Center"
+                            Text="THURSAY"/>
+                        <Image
+                            Grid.Row="10"
+                            Grid.Column="0"/>
+                        <Label
+                            Grid.Row="11"
+                            Grid.Column="0"
+                            Text="FRIED MEE"/>
+                        <Image
+                            Grid.Row="10"
+                            Grid.Column="1"/>
+                        <Label
+                            Grid.Row="11"
+                            Grid.Column="1"
+                            Text="ORANGE"/>
+
+                        <Label
+                            Grid.Row="12"
+                            Grid.ColumnSpan="1"
+                            VerticalOptions="Center"
+                            Text="FRIDAY"/>
+                        <Image
+                            Grid.Row="13"
+                            Grid.Column="0"/>
+                        <Label
+                            Grid.Row="14"
+                            Grid.Column="0"
+                            Text="FRIED SPAGETTI"/>
+                        <Image
+                            Grid.Row="13"
+                            Grid.Column="1"/>
+                        <Label
+                            Grid.Row="14"
+                            Grid.Column="1"
+                            Text="SIRAP"/>
+                    </Grid>                  
+                </Frame>-->  
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

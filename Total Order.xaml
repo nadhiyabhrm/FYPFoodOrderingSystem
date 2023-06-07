@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.Total_Order"
+             Title="Total Order">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                    <GradientStop Color="#FFD966" Offset="2.0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <StackLayout>
+                <Label
+                    Text="TOTAL ORDER"
+                    TextColor="#003366" FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    Padding="15"
+                    HeightRequest="110"/>
+
+                <Label
+                    Text="MORNING"
+                    FontSize="20"
+                    TextColor="Black"
+                    HorizontalOptions="Center"/>
+
+                <Grid 
+                    Margin="30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        Grid.Column="0"
+                        Text=" PACKAGE "
+                        FontSize="16"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"/>
+                    <Frame
+                        Grid.RowSpan="2"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        BorderColor="Black"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text=" A "
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        x:Name="MorningTotalA"
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                    <Frame
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="1"
+                        BorderColor="Black"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text=" B "
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        x:Name="MorningTotalB"
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                    <Frame
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="2"
+                        BorderColor="Black"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text=" C "
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        x:Name="MorningTotalC"
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                </Grid>
+
+                <Label
+                    Text="AFTERNOON"
+                    FontSize="20"
+                    TextColor="Black"
+                    HorizontalOptions="Center"/>
+
+                <Grid 
+                    Margin="30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        Grid.Column="0"
+                        Text=" PACKAGE "
+                        FontSize="16"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"/>
+                    <Frame
+                        Grid.RowSpan="2"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        BorderColor="Black"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text=" A "
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        x:Name="AfternoonTotalA"
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                    <Frame
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="1"
+                        BorderColor="Black"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text=" B "
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        x:Name="AfternoonTotalB"
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+
+                    <Frame
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="2"
+                        BorderColor="Black"/>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text=" C "
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        x:Name="AfternoonTotalC"
+                        FontSize="20"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                </Grid>
+
+                <Button
+                    x:Name="ClassOrder"
+                    Clicked="ClassOrder_Clicked"
+                    Text="CLASS ORDER"
+                    BorderColor="IndianRed"
+                    BackgroundColor="Pink"
+                    BorderWidth="2"
+                    Margin="0,0,0,20"
+                    HorizontalOptions="Center"
+                    WidthRequest="170"
+                    HeightRequest="38"/>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.CanteenProfile"
+             Title="Profile">
+    <ContentPage.Content>
+        <RefreshView
+            x:Name="RefreshCanteenProfile"
+            Refreshing="RefreshCanteenProfile_Refreshing">
+            <ScrollView>
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                            <GradientStop Color="#FFD966" Offset="2.0"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <StackLayout>
+                        <Label
+                            Text="USER DETAILS"
+                            FontSize="30"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            Margin="0,50,0,0"/>
+                        <Grid Margin="0,70,0,30">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--Display Name-->
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Text="NAME"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+                            <Frame
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                CornerRadius="5"/>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                x:Name="CanteenName"
+                                TextColor="Black"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"/>
+
+                            <!--Display ID-->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Text="ID"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+                            <Frame
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                CornerRadius="5"/>
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                x:Name ="CanteenId"
+                                TextColor="Black"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+
+                            <!--Display PhoneNo-->
+                            <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="NO TEL"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                            <Frame
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        CornerRadius="5"/>
+                            <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        x:Name="CanteenPhoneNo"
+                        TextColor="Black"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+
+                            <!--Display Email-->
+                            <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="Email"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                            <Frame
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        CornerRadius="5"/>
+                            <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        x:Name="CanteenEmail"
+                        TextColor="Black"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                        </Grid>
+                        <Button
+                    x:Name="CanteenEditProfile"
+                    Clicked="CanteenEditProfile_Clicked"
+                    Text="EDIT PROFILE"
+                    BorderColor="IndianRed"
+                    BackgroundColor="Pink"
+                    BorderWidth="2"
+                    Margin="0,0,0,20"
+                    HorizontalOptions="Center"
+                    WidthRequest="170"
+                    HeightRequest="38"/>
+                        <Button
+                    x:Name="CanteenMenu"
+                    Clicked="CanteenMenu_Clicked"
+                    Text="MENU"
+                    BorderColor="IndianRed"
+                    BackgroundColor="Pink"
+                    BorderWidth="2"
+                    Margin="0,0,0,20"
+                    HorizontalOptions="Center"
+                    WidthRequest="170"
+                    HeightRequest="38"/>
+                        <Button
+                    x:Name="CanteenOrder"
+                    Clicked="CanteenOrder_Clicked"
+                    Text="TOTAL ORDER"
+                    BorderColor="IndianRed"
+                    BackgroundColor="Pink"
+                    BorderWidth="2"
+                    Margin="0,0,0,20"
+                    HorizontalOptions="Center"
+                    WidthRequest="170"
+                    HeightRequest="38"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

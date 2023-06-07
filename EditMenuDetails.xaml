@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.EditMenuDetails">
+    <ContentPage.Content>
+        <RefreshView
+            x:Name="RefreshEditMenuDetails"
+            Refreshing="RefreshEditMenuDetails_Refreshing">
+            <ScrollView>
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                            <GradientStop Color="#FFD966" Offset="2.0"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <StackLayout>
+                        <Frame
+                            HeightRequest="120"
+                            Margin="30,30,30,20"
+                            BackgroundColor="#FFF2CC">
+                            <StackLayout>
+                                <Label
+                            Text="CURRENT DETAILS"
+                            FontSize ="20"
+                            Margin="0,0,0,5"
+                            HorizontalOptions="Center"
+                            TextColor="Black"/>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="20"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="90"/>
+                                        <ColumnDefinition Width="200"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Text="Food: "
+                                        HorizontalOptions="End"
+                                        TextColor="Black"/>
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        x:Name="CurrentFood"
+                                        TextColor="Black"/>
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Text="Drink: "
+                                        HorizontalOptions="End"
+                                        TextColor="Black"/>
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        x:Name="CurrentDrink"
+                                        TextColor="Black"/>
+                                    <Label
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Text="Fruit: "
+                                        HorizontalOptions="End"
+                                        TextColor="Black"/>
+                                    <Label
+                                        Grid.Row="2"
+                                        Grid.Column="1"
+                                        x:Name="CurrentFruit"
+                                        TextColor="Black"/>
+                                    <Label
+                                        Grid.Row="3"
+                                        Grid.Column="0"
+                                        Text="Snack: "
+                                        HorizontalOptions="End"
+                                        TextColor="Black"/>
+                                    <Label
+                                        Grid.Row="3"
+                                        Grid.Column="1"
+                                        x:Name="CurrentSnack"
+                                        TextColor="Black"/>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                        <Frame
+                            Margin="0,10,0,0"
+                            WidthRequest="280"
+                            HeightRequest="270"
+                            BackgroundColor="#FFF2CC"
+                            HorizontalOptions="Center"
+                            AbsoluteLayout.LayoutBounds="1, 0.05, 0.15, 0.1">
+                            <StackLayout>
+                                <Entry
+                                    x:Name="NewFood"
+                                    Placeholder="New Food"
+                                    HorizontalTextAlignment="Center"
+                                    Margin="0,10,0,20"/>
+                                <Entry
+                                    x:Name="NewDrink"
+                                    Placeholder="New Drink"
+                                    HorizontalTextAlignment="Center"
+                                    Margin="0,0,0,20"/>
+                                <Entry
+                                    x:Name="NewFruit"
+                                    Placeholder="New Fruit"
+                                    HorizontalTextAlignment="Center"
+                                    Margin="0,0,0,20"/>
+                                <Entry
+                                    x:Name="NewSnack"
+                                    Placeholder="New Snack"
+                                    HorizontalTextAlignment="Center"
+                                    Margin="0,0,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                        <Button
+                    Text="UPDATE"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    WidthRequest="180"
+                    HeightRequest="50"
+                    BorderColor="DarkGray"
+                    BorderWidth="2"
+                    CornerRadius="10"
+                    x:Name="UpdatedMenuDetails"
+                    Clicked="UpdatedMenuDetails_Clicked"
+                    Margin="0,10,0,0"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

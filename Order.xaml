@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.Order"
+             Title="Order">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                    <GradientStop Color="#FFD966" Offset="2.0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <StackLayout>
+                <Label
+                    Text="ORDER"
+                    TextColor="#003366"
+                    FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    Padding="15"
+                    FontFamily="Helvetica"
+                    HeightRequest="110"/>
+                <Button
+                    x:Name="Menu"
+                    Clicked="ViewMenu_Clicked"
+                    Text="VIEW MENU"
+                    BorderColor="IndianRed"
+                    BackgroundColor="Pink"
+                    BorderWidth="2"
+                    Margin="0,0,0,20"
+                    HorizontalOptions="Center"
+                    WidthRequest="170"
+                    HeightRequest="38"/>
+
+                <Frame
+                    Margin="10"
+                    BorderColor="IndianRed"
+                    BackgroundColor="Pink"
+                    Padding="5">
+                    <Grid
+                        Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="10"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            x:Name="ChildName"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            TextColor="Black"/>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            x:Name="IC"
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            TextColor="Black"/>
+                        <Picker
+                            SelectedIndexChanged="OnSelectedIndex"
+                            Grid.RowSpan="2"
+                            Grid.Column="1"
+                            x:Name="Package"
+                            Title="Choose package"
+                            HorizontalTextAlignment="Center">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>A</x:String>
+                                    <x:String>B</x:String>
+                                    <x:String>C</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </Grid>
+                </Frame>
+                <!--<Frame
+                    BackgroundColor="Transparent"
+                    Padding="10,0,10,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Column="0"
+                            Text="TOTAL"
+                            FontSize="20"
+                            Padding="100,5,0,0"
+                            TextColor="Black"
+                            BackgroundColor="Pink"/>
+                        <Label
+                            Grid.Column="1"
+                            x:Name="TotalPrice"
+                            Text="RM"
+                            FontSize="20"
+                            Padding="10,5,0,0"
+                            TextColor="Black"
+                            BackgroundColor="Pink">
+                        </Label>
+                        --><!--Tambah order price--><!--
+                    </Grid>
+                </Frame>-->
+                <Frame
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="Center"
+                    WidthRequest="110"
+                    HeightRequest="20"
+                    BackgroundColor="AliceBlue">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="RM"
+                            FontSize="20"
+                            TextColor="Black"/>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            x:Name="Price"
+                            FontSize="20"
+                            TextColor="Black"/>
+                    </Grid>
+                </Frame>
+                <Button
+                    x:Name="ConfirmOrder"
+                    Clicked="ConfirmOrder_Clicked"
+                    Text="CONFIRM"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    VerticalOptions="EndAndExpand"
+                    WidthRequest="180"
+                    HeightRequest="50"
+                    BorderColor="DarkGray"
+                    BorderWidth="2"
+                    CornerRadius="10"
+                    Margin="0,-150,0,45"/>                
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

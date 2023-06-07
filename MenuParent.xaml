@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.MenuParent"
+             Title="Menu">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                    <GradientStop Color="#FFD966" Offset="2.0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <StackLayout>
+                <Label
+                    Text="MENU"
+                    TextColor="#003366"
+                    FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    Padding="15"
+                    FontFamily="Helvetica"
+                    HeightRequest="110"/>
+                <Frame
+                    BackgroundColor="LightYellow"
+                    Padding="10"
+                    Margin="10,0,10,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.ColumnSpan="3"
+                            Text="PACKAGE A"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            HorizontalOptions="Center"/>
+                        <Image
+                            Grid.RowSpan="4"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Source="Package_A.png"/>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="- FRIED SET"
+                            HorizontalOptions="Start"/>
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Text="- DRINKS"
+                            HorizontalOptions="Start"/>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            Text="RM"
+                            HorizontalOptions="Center"/>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            x:Name="ParentPackageAPrice"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Button
+                            x:Name="EditPackageA"
+                            Clicked="ViewPackageA_Clicked"
+                            Grid.Row="2"
+                            Grid.RowSpan="2"
+                            Grid.Column="2"
+                            Text="VIEW"/>
+                    </Grid>
+                </Frame>
+
+                <Frame
+                    BackgroundColor="LightYellow"
+                    Padding="10"
+                    Margin="10,0,10,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.ColumnSpan="3"
+                            Text="PACKAGE B"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            HorizontalOptions="Center"/>
+                        <Image
+                            Grid.Row="0"
+                            Grid.RowSpan="5"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Source="Package_B.png"/>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="- FRIED SET"
+                            HorizontalOptions="Start"/>
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Text="- DRINKS"
+                            HorizontalOptions="Start"/>
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Text="- FRUIT"
+                            HorizontalOptions="Start"/>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            Text="RM"
+                            HorizontalOptions="Center"/>
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            x:Name="ParentPackageBPrice"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Button
+                            x:Name="EditPackageB"
+                            Clicked="ViewPackageB_Clicked"
+                            Grid.Row="3"
+                            Grid.RowSpan="2"
+                            Grid.Column="2"
+                            Text="VIEW"/>
+                    </Grid>
+                </Frame>
+
+                <Frame
+                    BackgroundColor="LightYellow"
+                    Padding="10"
+                    Margin="10,0,10,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.ColumnSpan="3"
+                            Text="PACKAGE C"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            HorizontalOptions="Center"/>
+                        <Image
+                            Grid.RowSpan="6"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Source="Package_C.png"/>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="- RICE SET"
+                            HorizontalOptions="Start"/>
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Text="- DRINKS"
+                            HorizontalOptions="Start"/>
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Text="- FRUIT"
+                            HorizontalOptions="Start"/>
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Text="- SNACK"
+                            HorizontalOptions="Start"/>
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            Text="RM"
+                            HorizontalOptions="Center"/>
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="2"
+                            x:Name="ParentPackageCPrice"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                        <Button
+                            x:Name="EditPackageC"
+                            Clicked="ViewPackageC_Clicked"
+                            Grid.Row="4"
+                            Grid.RowSpan="2"
+                            Grid.Column="2"
+                            Text="VIEW"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

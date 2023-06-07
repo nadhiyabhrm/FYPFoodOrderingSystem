@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FOFS.Profile"
+             Title="Profile">
+    <ContentPage.Content>
+        <RefreshView
+            x:Name="RefreshProfile"
+            Refreshing="RefreshProfile_Refreshing">
+            <ScrollView>
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF2CC" Offset="0.1"/>
+                            <GradientStop Color="#FFD966" Offset="2.0"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <StackLayout>
+                        <Label
+                            Text="USER DETAILS"
+                            FontSize="30"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            Margin="0,50,0,0"/>
+                        <Grid Margin="0,70,0,30">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--Display Name-->
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Text="NAME"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+                            <Frame
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                CornerRadius="5"/>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                x:Name="ProfileName"
+                                TextColor="Black"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"/>
+
+                            <!--Display ID
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Text="ID"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+                            <Frame
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                CornerRadius="5"/>-->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                x:Name ="ProfileId"
+                                TextColor="Transparent"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+
+                            <!--Display PhoneNo-->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Text="NO TEL"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+                            <Frame
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                CornerRadius="5"/>
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                x:Name="ProfilePhoneNo"
+                                TextColor="Black"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"/>
+
+                            <!--Display Email-->
+                            <Label
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Text="Email"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"/>
+                            <Frame
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                CornerRadius="5"/>
+                            <Label
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                x:Name="ProfileEmail"
+                                TextColor="Black"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"/>
+                        </Grid>
+                        <!--<Frame 
+                        BorderColor="Gray"
+                        CornerRadius="5"
+                        Padding="8"
+                        WidthRequest="170">
+                        <StackLayout
+                            WidthRequest="170">
+                        <Label 
+                           Text="Card Example"
+                           FontSize="Medium"
+                           FontAttributes="Bold" />
+                                <BoxView Color="Gray"   garisan pemisah
+                                 HeightRequest="2"
+                                 HorizontalOptions="Fill" />
+                                <Label 
+                                    Text="Frames can wrap more complex layouts to create more complex UI components, such as this card!"/>
+                        </StackLayout>
+                    </Frame>-->
+                        <!--<Label
+                        Text="EMAIL"
+                        FontAttributes="Bold"
+                        Margin="20,50,0,0"
+                        TextColor="Black"
+                        ></Label>
+                        <Frame
+                            Margin="0,50,0,0"
+                            HorizontalOptions="Center"
+                            HeightRequest="10"
+                            WidthRequest="170">
+                        </Frame>-->
+
+                        <Button
+                            x:Name="EditProfile"
+                            Clicked="EditProfile_Clicked"
+                            Text="EDIT PROFILE"
+                            BorderColor="IndianRed"
+                            BackgroundColor="Pink"
+                            BorderWidth="2"
+                            Margin="0,0,0,20"
+                            HorizontalOptions="Center"
+                            WidthRequest="170"
+                            HeightRequest="38"/>
+                        <Button
+                            x:Name="Child"
+                            Clicked="Child_Clicked"
+                            Text="CHILDREN"
+                            BorderColor="IndianRed"
+                            BackgroundColor="Pink"
+                            BorderWidth="2"
+                            Margin="0,0,0,20"
+                            HorizontalOptions="Center"
+                            WidthRequest="170"
+                            HeightRequest="38"/>
+                        <Button
+                            x:Name="Menu"
+                            Clicked="Menu_Clicked"
+                            Text="MENU"
+                            BorderColor="IndianRed"
+                            BackgroundColor="Pink"
+                            BorderWidth="2"
+                            Margin="0,0,0,20"
+                            HorizontalOptions="Center"
+                            WidthRequest="170"
+                            HeightRequest="38"/>
+
+                        <!--<Button
+                    x:Name="Order"
+                    Clicked="Order_Clicked"
+                    Text="ORDER"
+                    BorderColor="IndianRed"
+                    BackgroundColor="Pink"
+                    BorderWidth="2"
+                    Margin="0,0,0,20"
+                    HorizontalOptions="Center"
+                    WidthRequest="170"
+                    HeightRequest="38"/>-->
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>
+
+
+<!--
+
+                <ListView
+                    x:Name ="ProfileInfo">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell
+                                Text = "{Binding Name}"
+                                Detail = "{Binding Id}"/>
+                            <ViewCell>
+                                <Grid Padding="4" Margin="4">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".5"/>
+                                        <ColumnDefinition Width=".5"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Frame IsClippedToBounds="True" Grid.Row="0" Padding="0">
+                                        <StackLayout>
+                                            <BoxView VerticalOptions="Center" HeightRequest="90" WidthRequest="60"/>
+                                            <Label VerticalOptions="Center" Text="{Binding Id}" HorizontalOptions="Center"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell>-->
+<!--
+                    </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
